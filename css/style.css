@@ -104,106 +104,6 @@ nav .logo {
   display: none !important;
   content: none !important;
 }
-/* MEGA MENU POSITIONING */
-/* Forces the dropdown to stretch across the navbar instead of sticking to the link */
-.navbar-nav .position-static {
-  position: static !important;
-}
-
-.mega-menu {
-  position: absolute;
-  top: 100%;
-  left: 50% !important; /* Moves the starting point to the exact center of the screen */
-  transform: translateX(
-    -50%
-  ); /* Pulls it back exactly half its own width to center it */
-  width: 80% !important; /* Adjust this to 98% or 95% if you want side margins */
-  border-radius: 0 0 12px 12px;
-  background-color: #ffffff;
-  margin-top: 1px; /* Slight gap below the navbar */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Adds the soft shadow seen in the reference */
-  border: 1px solid #f1f5f9;
-  border-top: none;
-}
-/* Makes the text bold and purple when the dropdown is clicked/open */
-.navbar-nav .nav-link.show {
-  color: var(--main-color) !important;
-  font-weight: 700 !important;
-}
-
-/* Keeps the animated purple underline visible while the menu is open */
-.navbar-nav .nav-link.show::before {
-  width: 100%;
-}
-/* FONT AWESOME ARROW ANIMATION */
-
-.navbar-nav .dropdown-toggle .fa-chevron-down {
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
-}
-/* When bootstrap adds the 'show' class to open the menu, flip the arrow and turn it purple */
-.navbar-nav .dropdown-toggle.show .fa-chevron-down {
-  color: var(--main-color);
-}
-
-/* PROPERTY TYPES LINKS */
-.mega-link {
-  transition: color 0.2s ease;
-}
-.mega-link:hover {
-  color: var(--main-color) !important;
-}
-
-/* LOCATION CARDS */
-.location-card {
-  height: 70px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-.location-overlay {
-  position: absolute;
-  inset: 0;
-  /* Creates the purple-tinted fade over the images */
-  background: linear-gradient(
-    to right,
-    rgba(91, 33, 182, 0.85),
-    rgba(124, 58, 237, 0.3)
-  );
-  z-index: 0;
-}
-
-/* RESOURCE CARDS */
-.resource-card {
-  background-color: #fcfcfc;
-  border: 1px solid #f1f5f9;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
-.resource-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-.icon-box {
-  width: 30px;
-  height: 30px;
-}
-/* Custom utility colors for the resource icons */
-.bg-purple-light {
-  background-color: #f3e8ff;
-}
-.text-purple {
-  color: #7c3aed;
-}
-.bg-green-light {
-  background-color: #dcfce7;
-}
-.text-green {
-  color: #16a34a;
-}
 
 /* Hero Section */
 .hero {
@@ -224,18 +124,8 @@ nav .logo {
     padding-bottom: 80px;
   }
 }
-/* from the style of AI-Gemini if we need
- @media (max-width: 768px) {
-  .hero-section {
-    padding-top: 120px;
-    min-height: auto;
-    padding-bottom: 40px;
-  }
-} */
 .hero .section-container {
   z-index: 10;
-  /* from the style of AI-Gemini if we need 
-  max-width: 896px; */
 }
 .hero .hero-title {
   font-size: 60px;
@@ -248,11 +138,11 @@ nav .logo {
 .hero .hero-subtitle {
   line-height: 1.6;
   color: #ebe6e7;
-  max-width: 672px; /*This is as in the reference style, check it again if we need to chnage it in our style*/
+  max-width: 672px;
 }
 .search-box {
   box-shadow: 0 25px 50px -12px #00000040;
-  max-width: 850px; /*This is as in the reference style, check it again if we need to chnage it in our style*/
+  max-width: 850px;
 }
 .search-box .form-label {
   color: #364153;
@@ -343,6 +233,9 @@ nav .logo {
   padding: 8px 20px;
   border: 2px solid #ddd6ff;
   background-image: linear-gradient(to right, #f5f3ff, #faf5ff);
+}
+.contact .section-header .header-box span {
+  background-image: none;
 }
 .section-header .header-box::before,
 .section-header .header-box::after {
@@ -637,15 +530,11 @@ nav .logo {
   background-color: #7008e7;
 }
 .services img {
-  box-shadow:
-    0 10px 15px -3px #0000001a,
-    0 4px 6px -4px #0000001a;
+  box-shadow: var(--main-shadow);
   height: 384px;
 }
 .services .service-badge {
-  box-shadow:
-    0 10px 15px -3px #0000001a,
-    0 4px 6px -4px #0000001a;
+  box-shadow: var(--main-shadow);
   left: -24px;
   bottom: -24px;
 }
@@ -655,44 +544,7 @@ nav .logo {
 .services .service-badge div:last-child {
   color: var(--main-gray);
 }
-/* .service-tabs .nav-link:hover {
-  color: #1e293b;
-} */
 
-/* Active Tab State */
-/* .service-tabs .nav-link.active {
-  background-color: #f3e8ff !important;
-  color: #7c3aed !important;
-  border-bottom: 2px solid #7c3aed;
-} */
-
-/* --- Service Feature Icon Boxes --- */
-/* .service-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background-color: #f3e8ff;
-  color: #7c3aed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-} */
-
-/* --- Floating Statistic Card --- */
-.floating-stat {
-  bottom: 20px;
-  left: -20px;
-  min-width: 150px;
-  border: 1px solid #f1f5f9;
-}
-
-/* Responsive adjustment for the floating card on smaller screens */
-@media (max-width: 991px) {
-  .floating-stat {
-    left: 20px; /* Pulls it inside the image area on mobile devices */
-  }
-}
 /* Testimonials Section */
 .testimonials {
   padding-block: 80px;
@@ -705,7 +557,6 @@ nav .logo {
 .testimonials .carousel-inner {
   min-height: 390px;
 }
-
 .testimonials .carousel-item.active {
   display: flex;
   justify-content: center;
@@ -789,6 +640,16 @@ nav .logo {
   margin-bottom: 0;
   margin-top: 32px;
 }
+@media (max-width: 992px) {
+  .testimonials .carousel-dots {
+    bottom: -20px;
+  }
+}
+@media (max-width: 700px) {
+  .testimonials .carousel-dots {
+    bottom: -30px;
+  }
+}
 .testimonials .carousel-dots button {
   width: 12px !important;
   height: 12px !important;
@@ -816,15 +677,15 @@ nav .logo {
 /* FAQ Section */
 .questions {
   padding-block: 80px;
-  background-color: #fbf9fa;
+  background-color: #f9fafb;
 }
 .questions .questions-container {
-  /* from the style of AI-Gemini if we need 
-  max-width: 896px; */
+  max-width: 896px;
 }
 
 .questions .accordion .accordion-item {
   box-shadow: var(--main-shadow);
+  border: none;
 }
 
 .questions .accordion .accordion-item button {
@@ -850,6 +711,10 @@ nav .logo {
 }
 .custom-accordion .collapsing {
   transition: height 0.35s ease !important;
+  -webkit-transition: height 0.35s ease !important;
+  -moz-transition: height 0.35s ease !important;
+  -ms-transition: height 0.35s ease !important;
+  -o-transition: height 0.35s ease !important;
 }
 .custom-accordion .accordion-collapse {
   margin: 0 !important;
@@ -858,28 +723,16 @@ nav .logo {
 .questions .accordion .accordion-item .accordion-button:focus {
   box-shadow: none;
 }
-.questions .accordion .accordion-item .accordion-button::after {
-  color: #6a7282;
-  font-weight: bold;
-  transition: var(--main-transition);
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
-}
 .questions .accordion .accordion-item .accordion-body {
   color: var(--main-gray);
   line-height: 1.6;
   margin: 0;
   padding: 24px 32px;
 }
-/* 1. Completely hide Bootstrap's default accordion arrow */
 .questions .accordion .accordion-item .accordion-button::after {
   display: none !important;
 }
-
-/* 2. Style your new HTML Font Awesome arrow */
-.questions .accordion .custom-arrow {
+.questions .accordion .arrow-top-bottom {
   color: #6a7282;
   font-size: 16px;
   transition: var(--main-transition);
@@ -888,22 +741,61 @@ nav .logo {
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
 }
-
-/* 3. Animate your HTML arrow when the accordion is OPEN */
-/* When the button does NOT have the .collapsed class, rotate the icon inside it */
-.questions .accordion .accordion-button:not(.collapsed) .custom-arrow {
+.questions .accordion .accordion-button:not(.collapsed) .arrow-top-bottom {
   transform: rotate(-180deg);
-  color: var(--main-gray); /* Turns it darker to match the bold title */
+  color: var(--main-gray);
 }
 /* Contact Us Section */
 .contact {
   padding-block: 96px;
+}
+.contact .circles {
+  inset: 0;
+}
+.contact .circles .circle-1 {
+  width: 384px;
+  height: 384px;
+  background-color: #ede9fe;
+  right: -160px;
+  top: -160px;
+}
+.contact .circle-2 {
+  width: 384px;
+  height: 384px;
+  background-color: #f3e8ff;
+  left: -160px;
+  bottom: -160px;
+}
+.contact .half-circle {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.contact .half-circle-1 {
+  width: 128px;
+  height: 128px;
+  top: 80px;
+  right: 80px;
+  border: 4px solid #ddd6ff;
+}
+.contact .half-circle-2 {
+  width: 128px;
+  height: 128px;
+  bottom: 128px;
+  left: 128px;
+  border: 4px solid #e9d4ff;
 }
 .contact .section-container {
   z-index: 10;
 }
 .contact .contact-container {
   max-width: 1280px;
+}
+.contact .main-contact .row {
+  --bs-gutter-x: 32px;
+  --bs-gutter-y: 32px;
 }
 .contact .contact-container .contact-cards {
   margin-bottom: 64px;
@@ -917,22 +809,44 @@ nav .logo {
   -o-transition: var(--main-transition);
 }
 .contact .contact-cards .card-content:hover {
-  border-color: #c4b4ff;
   transform: translateY(-8px);
   -webkit-transform: translateY(-8px);
   -moz-transform: translateY(-8px);
   -ms-transform: translateY(-8px);
   -o-transform: translateY(-8px);
 }
+.contact .contact-cards .card-1:hover {
+  border-color: #c4b4ff;
+}
+.contact .contact-cards .card-2:hover {
+  border-color: #dab2ff;
+}
+.contact .contact-cards .card-3:hover {
+  border-color: #f4a8ff;
+}
+.contact .contact-cards .card-4:hover {
+  border-color: #a3b3ff;
+}
 .contact .contact-cards .card-content .card-icon {
   width: 64px;
   height: 64px;
-  background-image: linear-gradient(to bottom right, #8e51ff, #7f22fe);
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
   -moz-transition: var(--main-transition);
   -ms-transition: var(--main-transition);
   -o-transition: var(--main-transition);
+}
+.contact .contact-cards .card-1 .card-icon {
+  background-image: linear-gradient(to bottom right, #8e51ff, #7f22fe);
+}
+.contact .contact-cards .card-2 .card-icon {
+  background-image: linear-gradient(to bottom right, #ad46ff, #9810fa);
+}
+.contact .contact-cards .card-3 .card-icon {
+  background-image: linear-gradient(to bottom right, #e12afb, #fe9a00);
+}
+.contact .contact-cards .card-4 .card-icon {
+  background-image: linear-gradient(to bottom right, #615fff, #4f39f6);
 }
 .contact .contact-cards .card-content:hover .card-icon {
   transform: scale(1.1);
@@ -951,12 +865,30 @@ nav .logo {
   font-size: 14px;
   margin-bottom: 12px;
 }
+.contact .contact-cards .card-content a,
+.contact .contact-cards .card-content span {
+  font-weight: 600;
+}
 .contact .contact-cards .card-1 a {
   color: #7f22fe;
-  font-weight: 600;
 }
 .contact .contact-cards .card-1 a:hover {
   color: #7008e7;
+}
+.contact .contact-cards .card-2 a {
+  color: #9810fa;
+}
+.contact .contact-cards .card-2 a:hover {
+  color: #8200db;
+}
+.contact .contact-cards .card-3 span {
+  color: #e60076;
+}
+.contact .contact-cards .card-4 span {
+  color: #4f39f6;
+}
+.contact .contact-cards .card-4 span:hover {
+  color: #432dd7;
 }
 .contact .main-contact .left-info {
   /* background-image: linear-gradient(to bottom right, #f5f6f8, #fbf9fa, #f5f6f8); */
@@ -986,10 +918,10 @@ nav .logo {
   color: #4f39f6;
 }
 .contact .main-contact .left-info .icon-2 i {
-  color: #4f39f6;
+  color: #9810fa;
 }
 .contact .main-contact .left-info .icon-3 i {
-  color: #4f39f6;
+  color: #e60076;
 }
 .contact .main-contact .left-info .icon-4 i {
   color: #4f39f6;
@@ -1073,7 +1005,7 @@ nav .logo {
 .contact .main-contact .right-info textarea {
   padding: 12px 16px;
   /* background-color: #fbf9fa; */
-  background-color: #f5f6f8;
+  background-color: #f9fafb;
   color: inherit;
   border: 1px solid #ebe6e7;
   border-radius: 12px;
@@ -1087,10 +1019,6 @@ nav .logo {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 }
-
-/* .contact .main-contact .right-info .select-form {
-  background-position: right 1px center;
-} */
 .contact .main-contact .right-info textarea {
   resize: none;
 }
@@ -1108,8 +1036,7 @@ nav .logo {
     0 4px 6px -4px #0000001a;
 }
 .contact .main-contact .right-info .form-control::placeholder {
-  color: #d1d5dca9;
-  /* color: #212529; */
+  color: #a7a8ab;
 }
 .contact .main-contact .right-info .checkbox-box {
   gap: 12px;
@@ -1120,20 +1047,21 @@ nav .logo {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 }
-.contact .main-contact .right-info .check-input {
-  width: 20px;
-  height: 20px;
+.contact .main-contact .right-info .form-check-input {
+  width: 22px;
+  height: 22px;
   color: #7f22fe;
   border-color: #d1d5dc;
   cursor: pointer;
 }
 
-/* .contact .main-contact .right-info .check-input:focus {
-  box-shadow: 0 0 0 2px #cbfe1c;
+.contact .main-contact .right-info .form-check-input:checked {
+  background-color: #7f22fe !important;
+  border-color: #7f22fe !important;
 }
-.contact .main-contact .right-info .check-input:checked {
-  outline: 3px solid var(--main-yellow);
-} */
+.form-check-input:focus {
+  box-shadow: none !important;
+}
 .contact .main-contact .right-info .check-label {
   font-size: 14px;
   line-height: 1.4;
@@ -1168,4 +1096,47 @@ nav .logo {
   color: #6a7282;
   font-size: 14px;
   line-height: 1.4;
+}
+
+/* Footer Section */
+footer {
+  background-image: linear-gradient(to right, #4d179a, #59168b);
+}
+footer .footer-content {
+  border-bottom: 1px solid #ffffff1a;
+  padding-bottom: 24px;
+}
+footer .logo {
+  gap: 12px;
+}
+footer .copyright {
+  color: #ddd6ff;
+}
+footer .social-links a {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff1a;
+  backdrop-filter: blur(8px);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+footer .social-links a:hover {
+  background-color: #7f22fe;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+footer .love {
+  color: #c4b4ff;
+  font-size: 14px;
+  line-height: 1.4;
+}
+footer .love i {
+  color: #ff6467;
 }
