@@ -29,41 +29,269 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-bars fs-5"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#hero"
+              <a
+                class="nav-link active fw-medium"
+                aria-current="page"
+                href="#hero"
                 >Home</a
               >
             </li>
-            <li class="nav-item dropdown position-static">
+            <li class="nav-item dropdown position-relative">
               <a
-                class="nav-link dropdown-toggle d-flex align-items-center"
+                class="nav-link dropdown-toggle fw-medium pb-1 d-flex align-items-center"
                 href="#properties"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Properties
-                <i
-                  class="fa-solid fa-chevron-down ms-1"
-                  style="font-size: 12px"
-                ></i>
+                <i class="fa-solid fa-chevron-down ms-1"></i>
+              </a>
+
+              <div
+                class="dropdown-menu mega-menu bg-white mt-2 p-3 position-absolute rounded-3"
+              >
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="properties">
+                        <h3 class="fw-semibold mb-3">Featured Properties</h3>
+                        <div class="properties-content">
+                          <a href="#" class="d-block mb-3 rounded-3">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="Images/luxury-villa.jpeg"
+                                alt="luxury-villa"
+                                class="rounded-3 object-fit-cover"
+                              />
+                              <div class="image-info">
+                                <h4 class="fw-medium mb-0">Luxury Villa</h4>
+                                <p>$2.5M • 5 beds • 4 baths</p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="d-block mb-3 rounded-3">
+                            <div class="d-flex align-items-center">
+                              <img
+                                src="Images/modern-apartment.jpeg"
+                                alt="Apartment"
+                                class="rounded-3 object-fit-cover"
+                              />
+                              <div class="image-info">
+                                <h4 class="fw-medium mb-0">Modern Apartment</h4>
+                                <p>$850K • 2 beds • 2 baths</p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="property-types">
+                        <h3 class="fw-semibold mb-3">Property Types</h3>
+                        <ul class="ps-0">
+                          <li>
+                            <a href="#" class="d-flex align-items-center">
+                              <i class="fa-solid fa-house"></i>
+                              <span>Single Family Homes</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="d-flex align-items-center">
+                              <i class="fa-solid fa-building"></i>
+                              <span>Apartments</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="d-flex align-items-center">
+                              <i class="fa-solid fa-warehouse"></i>
+                              <span>Condominiums</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="d-flex align-items-center">
+                              <i class="fa-solid fa-store"></i>
+                              <span>Commercial</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="d-flex align-items-center">
+                              <i class="fa-solid fa-tree"></i>
+                              <span>Land & Lots</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="popular-locations">
+                        <h3 class="fw-semibold mb-3">Popular Locations</h3>
+                        <div>
+                          <a href="#" class="location-image d-block">
+                            <div
+                              class="image-details image-1 position-relative overflow-hidden"
+                            >
+                              <div
+                                class="location-layer position-absolute"
+                              ></div>
+                              <div
+                                class="image-name p-3 d-flex flex-column justify-content-center position-absolute"
+                              >
+                                <span class="fw-semibold text-white"
+                                  >New York</span
+                                >
+                                <span>2,145 Properties</span>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="location-image d-block">
+                            <div
+                              class="image-details image-2 position-relative overflow-hidden"
+                            >
+                              <div
+                                class="location-layer position-absolute"
+                              ></div>
+                              <div
+                                class="image-name p-3 d-flex flex-column justify-content-center position-absolute"
+                              >
+                                <span class="fw-semibold text-white"
+                                  >Los Angeles</span
+                                >
+                                <span>1,873 Properties</span>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#" class="location-image d-block">
+                            <div
+                              class="image-details image-3 position-relative overflow-hidden"
+                            >
+                              <div
+                                class="location-layer position-absolute"
+                              ></div>
+                              <div
+                                class="image-name p-3 d-flex flex-column justify-content-center position-absolute"
+                              >
+                                <span class="fw-semibold text-white"
+                                  >Miami</span
+                                >
+                                <span>1,526 Properties</span>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="resources">
+                        <h3 class="fw-semibold mb-3">Resources</h3>
+                        <div>
+                          <a
+                            href="#"
+                            class="card-1 mb-3 position-relative d-block overflow-hidden"
+                          >
+                            <div class="resource-content">
+                              <div
+                                class="resource-title d-flex align-items-center"
+                              >
+                                <div
+                                  class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                >
+                                  <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <h4 class="fw-semibold">Buying Guide</h4>
+                              </div>
+                              <p>
+                                Essential tips and strategies for first-time
+                                homebuyers
+                              </p>
+                              <div class="learn-more d-flex align-items-center">
+                                <span class="fw-medium">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                              </div>
+                            </div>
+                            <div
+                              class="circle rounded-circle position-absolute top-0 end-0"
+                            ></div>
+                          </a>
+                          <a
+                            href="#"
+                            class="card-2 mb-3 position-relative d-block overflow-hidden"
+                          >
+                            <div class="resource-content">
+                              <div
+                                class="resource-title d-flex align-items-center"
+                              >
+                                <div
+                                  class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                >
+                                  <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h4 class="fw-semibold">Investment Tips</h4>
+                              </div>
+                              <p>
+                                Smart strategies for property investment success
+                              </p>
+                              <div class="learn-more d-flex align-items-center">
+                                <span class="fw-medium">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                              </div>
+                            </div>
+                            <div
+                              class="circle rounded-circle position-absolute top-0 end-0"
+                            ></div>
+                          </a>
+                          <a
+                            href="#"
+                            class="card-3 mb-3 position-relative d-block overflow-hidden"
+                          >
+                            <div class="resource-content">
+                              <div
+                                class="resource-title d-flex align-items-center"
+                              >
+                                <div
+                                  class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                >
+                                  <i class="fa-solid fa-file-lines"></i>
+                                </div>
+                                <h4 class="fw-semibold">Market Reports</h4>
+                              </div>
+                              <p>
+                                In-depth analysis of real estate market trends
+                              </p>
+                              <div class="learn-more d-flex align-items-center">
+                                <span class="fw-medium">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ms-2"></i>
+                              </div>
+                            </div>
+                            <div
+                              class="circle rounded-circle position-absolute top-0 end-0"
+                            ></div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="#testimonials"
+                >Testimonials
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link fw-medium" href="#questions">FAQ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#testimonials">Testimonials </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#questions">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link fw-medium" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
