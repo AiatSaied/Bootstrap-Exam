@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbarSupportedContent"
+    data-bs-offset="100"
+    tabindex="0"
+  >
     <nav class="navbar navbar-expand-lg bg-white fixed-top w-100 p-0">
       <div class="container-fluid nav-container position-relative mx-auto px-4">
         <div
@@ -32,7 +37,8 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fa-solid fa-bars fs-5"></i>
+            <i class="fa-solid fa-bars fs-5 menu-icon"></i>
+            <i class="fa-solid fa-xmark fs-5 close-icon"></i>
           </button>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,7 +46,10 @@
             class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-stretch align-items-lg-center"
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#hero"
+              <a
+                class="nav-link active fw-medium"
+                aria-current="page"
+                href="#hero"
                 >Home</a
               >
             </li>
@@ -651,7 +660,7 @@
           </div>
         </div>
         <div class="text-center">
-          <button class="btn view-all rounded-3 text-white">
+          <button class="btn view-all rounded-3 text-white fw-semibold">
             View All Properties
             <i class="fa-solid fa-arrow-right ms-2"></i>
           </button>
@@ -682,7 +691,7 @@
           >
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link active fw-semibold"
                 id="tab-buying"
                 data-bs-toggle="pill"
                 data-bs-target="#buying"
@@ -694,7 +703,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link fw-semibold"
                 id="tab-selling"
                 data-bs-toggle="pill"
                 data-bs-target="#selling"
@@ -706,7 +715,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link fw-semibold"
                 id="tab-renting"
                 data-bs-toggle="pill"
                 data-bs-target="#renting"
@@ -718,7 +727,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link fw-semibold"
                 id="tab-investing"
                 data-bs-toggle="pill"
                 data-bs-target="#investing"
@@ -730,7 +739,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link"
+                class="nav-link fw-semibold"
                 id="tab-commercial"
                 data-bs-toggle="pill"
                 data-bs-target="#commerical"
@@ -762,7 +771,7 @@
                           <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Property Search</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">Property Search</h4>
                           <p class="mb-0">
                             Access exclusive listings and get notified of new
                             properties that match your criteria.
@@ -774,7 +783,9 @@
                           <i class="fa-solid fa-calculator"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Financial Planning</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Financial Planning
+                          </h4>
                           <p class="mb-0">
                             Get pre-approved for mortgages and understand your
                             budget with our financial experts.
@@ -786,7 +797,9 @@
                           <i class="fa-solid fa-handshake"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Negotiation Support</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Negotiation Support
+                          </h4>
                           <p class="mb-0">
                             Our skilled negotiators ensure you get the best
                             possible deal on your dream home.
@@ -795,7 +808,7 @@
                       </div>
                     </div>
                     <button
-                      class="btn btn-search search-button text-white rounded-3"
+                      class="btn btn-search service-button text-white rounded-3 fw-semibold"
                     >
                       Start Your Search
                     </button>
@@ -841,7 +854,7 @@
                           <i class="fa-solid fa-chart-line"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Market Analysis</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">Market Analysis</h4>
                           <p class="mb-0">
                             Get a comprehensive market analysis to price your
                             home competitively.
@@ -853,7 +866,9 @@
                           <i class="fa-solid fa-camera"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Professional Marketing</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Professional Marketing
+                          </h4>
                           <p class="mb-0">
                             High-quality photography, virtual tours, and
                             multi-channel marketing campaigns.
@@ -865,7 +880,7 @@
                           <i class="fa-solid fa-users"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Buyer Screening</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">Buyer Screening</h4>
                           <p class="mb-0">
                             We pre-qualify buyers to ensure serious inquiries
                             and smooth transactions.
@@ -874,7 +889,7 @@
                       </div>
                     </div>
                     <button
-                      class="btn btn-search search-button text-white rounded-3"
+                      class="btn btn-search service-button text-white rounded-3 fw-semibold"
                     >
                       Get Home Valuation
                     </button>
@@ -920,7 +935,7 @@
                           <i class="fa-solid fa-map-location-dot"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Prime Locations</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">Prime Locations</h4>
                           <p class="mb-0">
                             Access rentals in the most desirable neighborhoods
                             and communities.
@@ -932,7 +947,9 @@
                           <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Verified Properties</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Verified Properties
+                          </h4>
                           <p class="mb-0">
                             All our rental properties are thoroughly inspected
                             and verified for quality.
@@ -944,7 +961,7 @@
                           <i class="fa-solid fa-screwdriver-wrench"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">24/7 Support</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">24/7 Support</h4>
                           <p class="mb-0">
                             Round-the-clock maintenance and tenant support
                             services.
@@ -953,7 +970,7 @@
                       </div>
                     </div>
                     <button
-                      class="btn btn-search search-button text-white rounded-3"
+                      class="btn btn-search service-button text-white rounded-3 fw-semibold"
                     >
                       Browse Rentals
                     </button>
@@ -999,7 +1016,9 @@
                           <i class="fa-solid fa-chart-pie"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Portfolio Analysis</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Portfolio Analysis
+                          </h4>
                           <p class="mb-0">
                             Comprehensive analysis of investment opportunities
                             and portfolio optimization.
@@ -1011,7 +1030,7 @@
                           <i class="fa-solid fa-money-bill-wave"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">ROI Projections</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">ROI Projections</h4>
                           <p class="mb-0">
                             Detailed return on investment calculations and
                             market forecasting.
@@ -1023,7 +1042,9 @@
                           <i class="fa-solid fa-gear"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Property Management</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Property Management
+                          </h4>
                           <p class="mb-0">
                             Full-service property management for hands-off
                             investment experience.
@@ -1032,7 +1053,7 @@
                       </div>
                     </div>
                     <button
-                      class="btn btn-search search-button text-white rounded-3"
+                      class="btn btn-search service-button text-white rounded-3 fw-semibold"
                     >
                       Explore Investments
                     </button>
@@ -1078,7 +1099,7 @@
                           <i class="fa-solid fa-building"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Office Spaces</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">Office Spaces</h4>
                           <p class="mb-0">
                             Prime office locations for businesses of all sizes
                             and industries.
@@ -1090,7 +1111,9 @@
                           <i class="fa-solid fa-warehouse"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Industrial Properties</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">
+                            Industrial Properties
+                          </h4>
                           <p class="mb-0">
                             Warehouses, manufacturing facilities, and
                             distribution centers
@@ -1102,7 +1125,7 @@
                           <i class="fa-solid fa-store"></i>
                         </div>
                         <div class="service-content">
-                          <h4 class="mb-2 fs-5">Retail Spaces</h4>
+                          <h4 class="mb-2 fs-5 fw-semibold">Retail Spaces</h4>
                           <p class="mb-0">
                             High-traffic retail locations and shopping center
                             opportunities.
@@ -1111,7 +1134,7 @@
                       </div>
                     </div>
                     <button
-                      class="btn btn-search search-button text-white rounded-3"
+                      class="btn btn-search service-button text-white rounded-3 fw-semibold"
                     >
                       View Commercial Properties
                     </button>
@@ -1696,7 +1719,7 @@
                         <i class="fa-solid fa-location-dot"></i>
                       </div>
                       <div class="details">
-                        <h4 class="mb-1">Address</h4>
+                        <h4 class="mb-1 fw-semibold">Address</h4>
                         <p>
                           1234 Luxury Boulevard<br />Beverly Hills, CA 90210
                         </p>
@@ -1709,7 +1732,7 @@
                         <i class="fa-solid fa-phone"></i>
                       </div>
                       <div class="details">
-                        <h4 class="mb-1">Phone</h4>
+                        <h4 class="mb-1 fw-semibold">Phone</h4>
                         <p>+1 (555) 123-4567<br />+1 (555) 987-6543</p>
                       </div>
                     </div>
@@ -1720,7 +1743,7 @@
                         <i class="fa-solid fa-envelope"></i>
                       </div>
                       <div class="details">
-                        <h4 class="mb-1">Email</h4>
+                        <h4 class="mb-1 fw-semibold">Email</h4>
                         <p>info@elitehomes.com<br />support@elitehomes.com</p>
                       </div>
                     </div>
@@ -1731,7 +1754,7 @@
                         <i class="fa-solid fa-clock"></i>
                       </div>
                       <div class="details">
-                        <h4 class="mb-1">Working Hours</h4>
+                        <h4 class="mb-1 fw-semibold">Working Hours</h4>
                         <p>
                           Mon-Fri: 8:00 AM - 8:00 PM<br />Sat-Sun: 9:00 AM -
                           6:00 PM

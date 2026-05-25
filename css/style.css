@@ -111,6 +111,18 @@ nav .logo {
 .navbar .navbar-toggler:hover i {
   color: #7c3aed;
 }
+.navbar-toggler .close-icon {
+  display: none;
+}
+.navbar-toggler .menu-icon {
+  display: inline-block;
+}
+.navbar-toggler[aria-expanded="true"] .menu-icon {
+  display: none;
+}
+.navbar-toggler[aria-expanded="true"] .close-icon {
+  display: inline-block;
+}
 .navbar .nav-logo {
   width: 80%;
 }
@@ -188,13 +200,13 @@ nav .logo {
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
   }
-  .navbar-nav .dropdown-toggle[aria-expanded="true"] i{
+  .navbar-nav .dropdown-toggle[aria-expanded="true"] i {
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
-}
+  }
 }
 .navbar-nav .dropdown-toggle::after {
   display: none !important;
@@ -518,9 +530,7 @@ nav .logo {
     width: 50px;
     height: 50px;
   }
-  .mega-menu .properties .properties-content .image-info h4 {
-    font-size: 12px;
-  }
+  .mega-menu .properties .properties-content .image-info h4,
   .mega-menu .properties .properties-content .image-info p {
     font-size: 12px;
   }
@@ -672,7 +682,6 @@ nav .logo {
 .search-box form .search-button,
 .featured-properties .view-all {
   padding: 16px 32px;
-  font-weight: 600;
   background-image: linear-gradient(to right, #7f22fe, #9810fa) !important;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
@@ -871,7 +880,10 @@ nav .logo {
   padding-inline: 6px;
   padding-bottom: 10px;
 }
-.featured-properties .property-card .card-image .heart-icon i {
+.featured-properties .property-card .card-image .heart-icon i,
+.featured-properties .property-card .card-content .card-details,
+.featured-properties .property-card .card-content .card-address,
+.featured-properties .property-card .card-content .bottom-info .name {
   color: var(--main-gray);
 }
 .featured-properties .property-card .card-image .camera-icon {
@@ -894,13 +906,9 @@ nav .logo {
 }
 .featured-properties .property-card .card-content .card-details {
   margin-bottom: 12px;
-  color: var(--main-gray);
 }
 .featured-properties .property-card .card-content .card-name {
   color: #1e2939;
-}
-.featured-properties .property-card .card-content .card-address {
-  color: var(--main-gray);
 }
 .featured-properties .property-card .card-content .bottom-info img {
   width: 32px;
@@ -908,7 +916,6 @@ nav .logo {
 }
 .featured-properties .property-card .card-content .bottom-info .name {
   font-size: 14px;
-  color: var(--main-gray);
 }
 .featured-properties .property-card .card-content button {
   color: var(--main-color);
@@ -952,7 +959,6 @@ nav .logo {
 .services .services-content .service-tabs .nav-link {
   padding: 16px 24px;
   color: var(--main-gray);
-  font-weight: 600;
   background-color: transparent;
   border-radius: 0;
   margin-bottom: -1px;
@@ -1025,38 +1031,37 @@ nav .logo {
 .commerical-content .service-badge div:first-child {
   color: #4f39f6;
 }
-.buying-content .search-button {
+.buying-content .service-button {
   background-color: var(--main-color);
 }
-.buying-content .search-button:hover {
+.buying-content .service-button:hover {
   background-color: #7008e7;
 }
-.selling-content .search-button {
+.selling-content .service-button {
   background-color: #00a63e;
 }
-.selling-content .search-button:hover {
+.selling-content .service-button:hover {
   background-color: #008236;
 }
-.renting-content .search-button {
+.renting-content .service-button {
   background-color: #9810fa;
 }
-.renting-content .search-button:hover {
+.renting-content .service-button:hover {
   background-color: #8200db;
 }
-.investing-content .search-button {
+.investing-content .service-button {
   background-color: #d08700;
 }
-.investing-content .search-button:hover {
+.investing-content .service-button:hover {
   background-color: #a65f00;
 }
-.commerical-content .search-button {
+.commerical-content .service-button {
   background-color: #4f39f6;
 }
-.commerical-content .search-button:hover {
+.commerical-content .service-button:hover {
   background-color: #432dd7;
 }
 .services .content-info .service-content h4 {
-  font-weight: 600;
   color: var(--main-black);
   line-height: 1.4;
 }
@@ -1066,8 +1071,7 @@ nav .logo {
   line-height: 1.5;
 }
 
-.services .search-button {
-  font-weight: 600;
+.services .service-button {
   padding: 16px 32px;
   margin-top: 32px;
   transition: 0.15s;
@@ -1146,7 +1150,8 @@ nav .logo {
 .testimonials .card-stars .star-icons {
   color: #ffb900;
 }
-.testimonials .card-stars span {
+.testimonials .card-stars span,
+.testimonials .image-info p:first-child {
   color: var(--main-gray);
 }
 .testimonials blockquote {
@@ -1164,7 +1169,6 @@ nav .logo {
   line-height: 1.5;
 }
 .testimonials .image-info p:first-child {
-  color: var(--main-gray);
   line-height: 1.4;
 }
 .testimonials .image-info p:last-child {
@@ -1438,6 +1442,11 @@ nav .logo {
 .contact .contact-cards .card-content h3 {
   font-size: 18px;
   line-height: 1.55;
+}
+.contact .contact-cards .card-content h3,
+.contact .main-contact .left-info h3,
+.contact .main-contact .left-info .details h4,
+.contact .main-contact .right-info .right-info-title h3 {
   color: var(--main-black);
 }
 .contact .contact-cards .card-content p {
@@ -1461,10 +1470,13 @@ nav .logo {
 .contact .contact-cards .card-2 a:hover {
   color: #8200db;
 }
-.contact .contact-cards .card-3 span {
+.contact .contact-cards .card-3 span,
+.contact .main-contact .left-info .icon-3 i {
   color: #e60076;
 }
-.contact .contact-cards .card-4 span {
+.contact .contact-cards .card-4 span,
+.contact .main-contact .left-info .icon-1 i,
+.contact .main-contact .left-info .icon-4 i {
   color: #4f39f6;
 }
 .contact .contact-cards .card-4 span:hover {
@@ -1476,9 +1488,6 @@ nav .logo {
 }
 .contact .main-contact .left-info .contacts {
   margin-bottom: 20px;
-}
-.contact .main-contact .left-info h3 {
-  color: var(--main-black);
 }
 .contact .main-contact .left-info .contact-icon {
   width: 48px;
@@ -1493,21 +1502,10 @@ nav .logo {
   font-size: 18px;
   line-height: 1.55;
 }
-.contact .main-contact .left-info .icon-1 i {
-  color: #4f39f6;
-}
 .contact .main-contact .left-info .icon-2 i {
   color: #9810fa;
 }
-.contact .main-contact .left-info .icon-3 i {
-  color: #e60076;
-}
-.contact .main-contact .left-info .icon-4 i {
-  color: #4f39f6;
-}
 .contact .main-contact .left-info .details h4 {
-  color: var(--main-black);
-  font-weight: 600;
   font-size: inherit;
 }
 .contact .main-contact .left-info .details p {
@@ -1566,7 +1564,6 @@ nav .logo {
   margin-bottom: 32px;
 }
 .contact .main-contact .right-info .right-info-title h3 {
-  color: var(--main-black);
   font-size: 30px;
   margin-bottom: 12px;
 }
